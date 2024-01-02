@@ -1,0 +1,32 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>
+</title>
+</head>
+<body>
+<h1 id="h"><center> This is heading </h1> </center>
+Change webpage background color:
+<button class="button " onclick="background('yellow')"> Yellow </button>
+<button class="button button2" onclick="background('blue')">Blue</button>
+<button class="button button3" onclick="background('red')">Red</button>
+<br>
+<br>
+Change webpage heading color:
+<button id="h" class="button" onclick="background1('yellow')"> Yellow </button>
+<button id="h" class="button button2" onclick="background1('blue')">Blue</button>
+<button id="h" class="button button3" onclick="background1('red')">Red</button>
+<script>
+function background(color){
+document.body.style.background=color
+}
+function background1(color)
+{
+var c=document.getElementById("h")
+c.style.color=color
+}
+</script>
+
+
+</body>
+</html>

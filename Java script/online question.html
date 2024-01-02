@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+<h1><center> Online Examination </center> </h1>
+<label>Question 1: ------ is  my Contry </label>
+<br> <br>
+<input type="radio" name="num1" id="1" > India <br>
+<input type="radio" name="num1"> China <br>
+<input type="radio" name="num1"> Australia <br>
+<input type="radio" name="num1"> England <br>
+<br> <br>
+<label>Question 2: What is 24*7 </label>
+<br> <br>
+<input type="radio" name="num2" > 300 <br>
+<input type="radio" name="num2"> 247 <br>
+<input type="radio" name="num2" id="2"> 168 <br>
+<input type="radio" name="num2"> 150 <br>
+<br>  <br>
+<label> Question 3: National animal of india </label>
+<br> <br>
+<input type="radio" name="num"  id="3"> Tiger <br>
+<input type="radio" name="num"> Lion <br>
+<input type="radio" name="num" > Fox <br>
+<input type="radio" name="num"> Elephant <br>
+<br>  <br>
+<label>Question 4: God of Cricket </label>
+<br> <br>
+<input type="radio" name="num3" > Dhoni <br>
+<input type="radio" name="num3"> Yuvaraj <br>
+<input type="radio" name="num3" > Raina <br>
+<input type="radio" name="num3" id="4"> Sachin <br>
+<br> <br> 
+<label> Question 5: Capital of India  </label>
+<br> <br>
+<input type="radio" name="num5" id="5" > Delhi <br>
+<input type="radio" name="num5"> Kerala <br>
+<input type="radio" name="num5" > Goa <br>
+<input type="radio" name="num5"> Tamilnadu <br>
+
+
+
+<button onclick="check()">Submit</button>
+<script>
+function check()
+{
+var c;
+c=0;
+if(document.getElementById("1").checked)
+{
+c=c+1;
+}
+if(document.getElementById("2").checked)
+{
+c=c+1;
+}
+if(document.getElementById("3").checked)
+{
+c=c+1;
+}
+if(document.getElementById("4").checked)
+{
+c=c+1;
+}
+if(document.getElementById("5").checked)
+{
+c=c+1;
+}
+alert("your score is "+c);
+}
+</script
+
+
+
+
+
+</body>
+</html>
+

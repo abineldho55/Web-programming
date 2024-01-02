@@ -1,0 +1,175 @@
+
+<html>
+<head>
+  
+  <title>Registration Form</title>
+  <style>
+    
+    .error {
+      color: red;
+    }
+	
+ .h2{
+ text-align:center;
+ }
+ 
+
+	
+  </style>
+</head>
+<body>
+
+  <h2 class="h2">Registration Form</h2>
+  <form id="registrationForm" onsubmit="validateForm(event)">
+  
+  <label for="User Id">User Id:</label>
+    <input type="text" id="userid" name="name" placeholder="Enter your User Id" required>
+    <span id="nameError" class="error"></span>
+  
+  <br> <br>
+  
+  <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    <span id="passwordError" class="error"></span>
+  
+   
+  <br>  <br>
+  
+  
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your  Name" required>
+    <span id="nameError" class="error"></span>
+
+    <br> <br>
+	
+	
+	<label for="address">Address:</label>
+    <textarea  id="Address" name="name"  placeholder="Enter your Address"  required  > </textarea>
+    <span id="nameError" class="error"></span>
+
+    <br> <br>
+	
+	
+	
+	<label for="country">Country:</label>
+     <select name="dropdown" >
+                    <option value= ----selected----- >
+                    <option  value ="india"> India 
+                         <option value ="Tamilnadu"> Tamilnadu
+                        <option value="Karnadaka"> Karnadaka
+                        <option value="Kolkata"> Kolkata
+                    </select>
+    <span id="nameError" class="error"></span>
+
+<br>  <br>
+
+<label for="pincode">Pincode:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your Pincode" required>
+    <span id="nameError" class="error"></span>
+
+    <br>  <br>
+	
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your Email Address" required>
+    <span id="emailError" class="error"></span>
+
+   
+	
+
+	
+	<br> <br>
+	
+	
+     <label for="gender">Gender:</label>
+    <input type="radio" name="gender"  value="male" id="1" >Male
+     <input type="radio" name="gender" value="female"> Female <br>
+
+    <br>  <br>
+	
+	
+	
+	<label for="language">Languages:</label>
+    <input type="checkbox" name="lang"  value="english" id="1" >English
+     <input type="checkbox" name="lang" value="english"> Malayalam 
+       <input type="checkbox" name="lang" value="english"> Hindi 
+	   
+	   <br> <br>
+	   
+	 <label for="about">About:</label>
+    <textarea  id="about" name="name" required  placeholder="Enter your details "> </textarea>  
+	   
+	   
+	   <br> <br>
+	   
+    <input type="submit" value="Register">
+  </form>
+
+  <script>
+    function validateForm(event) {
+     
+      event.preventDefault();
+
+     
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+	  var gender=document.getElementById("1").checked;
+     
+   
+      document.getElementById('nameError').innerText = '';
+      document.getElementById('emailError').innerText = '';
+      document.getElementById('passwordError').innerText = '';
+    
+      
+      var isValid = true;
+      
+
+      
+      if (name.trim() === '') {
+        document.getElementById('nameError').innerText = 'Name is required';
+        isValid = false;
+      }
+
+      if (email.trim() === '') {
+        document.getElementById('emailError').innerText = 'Email is required';
+        isValid = false;
+      } else if (!isValidEmail(email)) {
+        document.getElementById('emailError').innerText = 'Invalid email format';
+        isValid = false;
+      }
+
+      if (password.trim() === '') {
+        document.getElementById('passwordError').innerText = 'Password is required';
+        isValid = false;
+      }
+
+    
+      if (isValid) {
+       
+        alert('Form submitted successfully!');
+      }
+    }
+
+    function isValidEmail(email) {
+	
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	  
+      return emailRegex.test(email);
+    }
+	
+	
+
+
+     
+  </script>
+	
+	
+	
+	
+	
+	
+  </script>
+
+</body>
+</html>
